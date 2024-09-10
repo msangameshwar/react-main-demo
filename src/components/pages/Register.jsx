@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import Label from './form-elements/Label';
-import Input from './form-elements/Input';
-import Button from './form-elements/Button';
+import Label from '../form-elements/Label';
+import Input from '../form-elements/Input';
+import Button from '../form-elements/Button';
 
 const Register = () => {
   const {
@@ -17,8 +17,9 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('https://your-backend-api-endpoint/login', data);
-      console.log('Success:', response.data);
+      console.log(data)
+      // const response = await axios.post('https://your-backend-api-endpoint/login', data);
+      // console.log('Success:', response.data);
     } catch (error) {
       console.error('Error:', error);
     }

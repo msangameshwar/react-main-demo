@@ -1,10 +1,7 @@
+/* eslint-disable react/display-name */
 /* eslint-disable react/prop-types */
-const Input = ({ type, className, placeholder }) => {
-  return (
-    <>
-      <input type={type || 'text'} className={className} placeholder={placeholder || 'Enter value'} />
-    </>
-  );
-};
+import { forwardRef } from 'react';
+
+const Input = forwardRef(({ type, className, ...rest }, ref) => <input type={type} className={className} ref={ref} {...rest} />);
 
 export default Input;
