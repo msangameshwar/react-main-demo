@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
-import LoginForm from './components/LoginForm';
-import Register from './components/Register';
+import LoginForm from './components/pages/Login';
+import Register from './components/pages/Register';
 
 const App = () => {
   const [showLogin, setShowLogin] = useState(true);
